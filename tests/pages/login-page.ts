@@ -7,18 +7,20 @@ export class LoginPage {
   readonly url: string = SERVICE_URL
   readonly usernameField
   readonly passwordField
+  readonly signIn
 
   constructor(page: Page) {
     this.page = page
     this.usernameField = page.getByTestId('username-input')
     this.passwordField = page.getByTestId('password-input')
+    this.signIn = page.getByTestId('signIn-button')
   }
 
   async open() {
     await this.page.goto(this.url)
   }
 
-  async signIn() {
+  async authorize() {
     return new OrderPage(this.page)
   }
 }
