@@ -1,8 +1,8 @@
-import { Locator, Page } from '@playwright/test'
+import { Page } from '@playwright/test'
 
 export class OrderPage {
   readonly page: Page
-  readonly statusButton: Locator
+  readonly statusButton
 
   constructor(page: Page) {
     this.page = page

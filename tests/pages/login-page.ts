@@ -1,12 +1,12 @@
-import { Locator, Page } from '@playwright/test'
+import { Page } from '@playwright/test'
 import { SERVICE_URL } from '../../config/env-data'
 import { OrderPage } from './order-page'
 
 export class LoginPage {
   readonly page: Page
   readonly url: string = SERVICE_URL
-  readonly usernameField: Locator
-  readonly passwordField: Locator
+  readonly usernameField
+  readonly passwordField
 
   constructor(page: Page) {
     this.page = page
