@@ -6,10 +6,12 @@ export class LoginPage {
   readonly page: Page
   readonly url: string = SERVICE_URL
   readonly usernameField: Locator
+  readonly passwordField: Locator
 
   constructor(page: Page) {
     this.page = page
     this.usernameField = page.getByTestId('username-input')
+    this.passwordField = page.getByTestId('password-input')
   }
 
   async open() {
@@ -17,7 +19,6 @@ export class LoginPage {
   }
 
   async signIn() {
-    // actions
     return new OrderPage(this.page)
   }
 }
