@@ -23,7 +23,7 @@ test.beforeEach(async ({ context }) => {
   })
 })
 
-test.only('validate order creation page', async ({ context }) => {
+test('validate order creation page', async ({ context }) => {
   // create a new page in the context with the jwt already set in localStorage
   const page = await context.newPage()
   await page.goto(SERVICE_URL)
