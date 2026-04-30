@@ -1,7 +1,7 @@
 import { fakeJwt } from '../utils/jwt-generator'
 import { Page } from '@playwright/test'
 
-export async function mockLogin(page: Page) {
+export async function authMock(page: Page) {
   const jwt = fakeJwt()
 
   await page.route('**/login/student', async (route) => {
@@ -10,4 +10,13 @@ export async function mockLogin(page: Page) {
       status: 200,
     })
   })
+}
+
+export async function orderNotFoundMock(page: Page) {
+  // TODO : implement solution
+}
+
+export async function orderFoundMock(page: Page) {
+  // TODO : implement solution
+  // Note: use 'json' to represent response body
 }
